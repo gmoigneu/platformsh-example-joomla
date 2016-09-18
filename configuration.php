@@ -13,9 +13,9 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'pdomysql';
 	public $host = 'mysql';
-	public $user = 'edm';
-	public $password = 'edm';
-	public $db = 'edm';
+	public $user = '';
+	public $password = '';
+	public $db = '';
 	public $dbprefix = 'joo_';
 	public $live_site = '';
 	public $secret = 'Ow0ORVtuiXXi7cgo';
@@ -60,4 +60,23 @@ class JConfig {
 	public $tmp_path = '/code/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
+
+
+	public function __construct() {
+		if (empty($_ENV['PLATFORM_RELATIONSHIPS'])) {
+			return;	
+		}
+
+		// This is where we get the relationships of our application dynamically
+    		//from Platform.sh
+		$relationships = json_decode(base64_decode($_ENV['PLATFORM_RELATIONSHIPS']), TRUE);
+
+		// We are using the first relationship called "database" found in your
+		// relationships. Note that you can call this relationship as you wish
+		// in you .platform.app.yaml file, but 'database' is a good name.
+		$this->db = $relationships['database'][0]['path'];
+		$this->user = define('DB_USER', $relationships['database'][0]['username'];
+		$this->password = define('DB_PASSWORD', $relationships['database'][0]['password'];
+		$this->host = define('DB_HOST', $relationships['database'][0]['host'];
+	}
 }
