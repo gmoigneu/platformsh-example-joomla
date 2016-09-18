@@ -2,7 +2,7 @@
 
 ## Setup
 
-    git add remote platform [PROJECT-ID]@git.us.platform.sh:[PROJECT-ID].git
+    git add remote platform [PROJECT-ID]@git.[PROJECT-REGION].platform.sh:[PROJECT-ID].git
     git push platform master
 
 ## Sample data:
@@ -12,5 +12,5 @@
 
 ## Login
 
-Admin user: test
-Admin password: testtest
+    Admin user: test
+    Admin password: testtest
