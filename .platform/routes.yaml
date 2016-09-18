@@ -1,0 +1,7 @@
+"http://{default}/":
+    type: upstream
+    upstream: "magento1:php"
+
+"http://store2.{default}/":
+    type: upstream
+    upstream: "magento1:php"
