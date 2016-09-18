@@ -75,8 +75,8 @@ class JConfig {
 		// relationships. Note that you can call this relationship as you wish
 		// in you .platform.app.yaml file, but 'database' is a good name.
 		$this->db = $relationships['database'][0]['path'];
-		$this->user = define('DB_USER', $relationships['database'][0]['username'];
-		$this->password = define('DB_PASSWORD', $relationships['database'][0]['password'];
-		$this->host = define('DB_HOST', $relationships['database'][0]['host'];
+		$this->user = $relationships['database'][0]['username'];
+		$this->password = $relationships['database'][0]['password'];
+		$this->host = $relationships['database'][0]['host'];
 	}
 }
