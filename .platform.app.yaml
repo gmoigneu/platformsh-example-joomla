@@ -34,3 +34,4 @@ mounts:
     "/cache": "shared:files/cache"
     "/tmp": "shared:files/tmp"
     "/media": "shared:files/media"
+    "/administrator/logs": "shared:files/logs"
