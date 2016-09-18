@@ -9,3 +9,8 @@
 
     platform sql < setup-example.sql
     rsync -r media/. [PROJECT-ID]@ssh.[PROJECT-REGION].platform.sh:./media/
+
+## Login
+
+Admin user: test
+Admin password: testtest
