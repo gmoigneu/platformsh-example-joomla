@@ -56,8 +56,8 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = '/code/administrator/logs';
-	public $tmp_path = '/code/tmp';
+	public $log_path = '/app/administrator/logs';
+	public $tmp_path = '/app/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 
